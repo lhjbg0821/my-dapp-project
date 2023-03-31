@@ -1,27 +1,19 @@
-import PuppyLogo from "./images/puppy.png";
+import ContactMe from "./components/ContactMe";
+import Header from "./components/Header";
+import Introduce from "./components/Introduce";
+import Footer from "./components/Footer";
+import Portfolio from "./components/Portfolio";
 
 function App() {
   return (
     <div className="bg-red-100 min-h-screen">
-      <header className="bg-blue-100 h-12 md:h-20">
-        <div className="max-w-screen-xl mx-auto h-full flex justify-between items-center">
-          {/* <div>HyunJin's PortFolio</div> */}
-          <div>
-            <img className="w-12" src={PuppyLogo} alt="Nike"></img>
-          </div>
-          <ul className="flex gap-2 md:gap-8 text-xs md:text-base">
-            <li className="bg-indigo-300 btn-style">Introduce</li>
-            <li className="bg-purple-300 btn-style">Portfolio</li>
-            <li className="bg-blue-300 btn-style">Contact Me</li>
-          </ul>
-        </div>
-      </header>
+      <Header />
       <main>
-        {/* Introduce */}
-        <div className="bg-green-100 max-w-screen-xl mx-auto h-96 flex justify-center items-center">
-          Hello, My Name is HyunJin. I am Programmer.
-        </div>
+        <Introduce />
+        <Portfolio />
+        <ContactMe />
       </main>
+      <Footer />
     </div>
   );
 }
